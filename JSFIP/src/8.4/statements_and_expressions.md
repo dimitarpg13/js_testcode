@@ -43,3 +43,30 @@ Let's look at more examples of expressions. We enter expressions and the REPL ev
 true
 ```
 
+## What is allowed where?
+
+The current location within JavaScript source code determines which kind of synthactic constructs you are allowed to use:
+
+* The body of a function must be a sequence of statements:
+
+```js
+function max(x, y) {
+  if (x > y) {
+    return x;
+  } else {
+    return y;
+  }
+}
+```
+
+* The arguments of a function call or a method call must be expressions:
+
+```js
+console.log('ab' + 'cd', Number('123'));
+``` 
+
+However, expressions can be used as statements. Then they are called _expression statements_. The opposite
+is not true: when the context requires an expression, you can't use a statement.
+
+ 
+
