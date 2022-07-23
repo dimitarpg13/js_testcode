@@ -16,3 +16,11 @@ The following tokens are also keywords, but currently not used in the language:
 The following literals are reserved words:
   
     true false null
+
+Technically, these words are not reserved, but you should avoid them too because
+effectively they act as keywords:
+
+    Infinity NaN undefined async
+
+You shouldn't use the names of global variables (`String`, `Math`, etc.) for your own
+variables and parameters.
