@@ -68,5 +68,12 @@ console.log('ab' + 'cd', Number('123'));
 However, expressions can be used as statements. Then they are called _expression statements_. The opposite
 is not true: when the context requires an expression, you can't use a statement.
 
- 
+The following code demonstrates that any expression `bar()` can be either expression or statement - it depends on the context:
+
+```js
+function f() {
+  console.log(bar()); // bar() is an expression
+  bar(); // bar(); is (expression) statement
+}
+```
 
