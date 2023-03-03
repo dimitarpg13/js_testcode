@@ -9,3 +9,12 @@ if (onSale || discount > 0) {
 } else {
     console.log("Full price");
 }
+var rect = {
+    width: 100,
+    height: 50,
+    toString: function() {
+        return "Width: " + this.width + ", height: " + this.height;
+    }
+};
+console.log("My object is " + rect.toString());
+
